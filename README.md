@@ -1,1 +1,1 @@
-Readme 244107020218
+Readme 244107020218git reset nama_file_tersebut
