@@ -1,0 +1,15 @@
+# Kredensial, Token, dan Konfigurasi Pribadi
+.env
+*.env
+secrets.json
+credentials.json
+
+# Folder Editor & Cache
+.vscode/
+.dart_tool/
+build/
+.pub/
+
+# File Sistem Operasi
+.DS_Store
+Thumbs.db
