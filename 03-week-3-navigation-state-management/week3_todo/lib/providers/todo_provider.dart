@@ -27,4 +27,8 @@ class TodoListNotifier extends Notifier<List<Todo>> {
 final todoListProvider =
     NotifierProvider<TodoListNotifier, List<Todo>>(TodoListNotifier.new);
 
-    
+// Provider turunan untuk filter tugas 
+final uncompletedTodoProvider = Provider<List<Todo>>((ref) {
+  final todos = ref.watch(todoListProvider);
+  return todos.where((todo) => !todo.done).toList();
+});

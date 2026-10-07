@@ -64,7 +64,7 @@ final statsProvider = AsyncNotifierProvider<StatsNotifier, List<String>>(
 // 3. UI (Layer Presentasi)
 // ==========================================
 class StatsPage extends ConsumerWidget {
-  const StatsPage({Key? key}) : super(key: key);
+  const StatsPage ({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

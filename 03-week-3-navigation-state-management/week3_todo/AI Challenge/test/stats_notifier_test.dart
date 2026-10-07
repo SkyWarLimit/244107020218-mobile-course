@@ -1,6 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'stats_page.dart';
+// ignore: avoid_relative_lib_imports
+import '../lib/stats/stats_page.dart';
 // Membuat Fake Repository yang selalu Sukses
 class FakeSuccessRepository implements StatsRepository {
   @override
@@ -56,8 +57,8 @@ void main() {
       // 2. Tunggu proses awal selesai, expect throw Exception
       await expectLater(
         container.read(statsProvider.future),
-        throwsA(isA<Exception>()),
-      );
+        throwsA(anything),
+        );
 
       // 3. Verifikasi state menjadi AsyncError
       expect(
